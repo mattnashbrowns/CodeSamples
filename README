@@ -2,3 +2,5 @@ This repository contains code from recent projects.
 
 Current contents:
 
+perl -- Some Perl projects from the past
+python -- A first attempt at a Google Apps Engine app. Realized I would rather be doing this in Perl, and not paying Google for storage space.
