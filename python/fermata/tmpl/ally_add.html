@@ -1,0 +1,41 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+		<table>
+			<tr>
+				<th>Empire Name</th>
+				<th>Real Name</th>
+				<th>Uni Level</th>
+				<th>Colonies</th>
+				<th>Email</th>
+				<th>Updated</th>
+				<th>Actions</th>
+			</tr>
+			{% for member in allies %}
+			<tr>
+				<td><a href=/member?id={{ member.empire_id }}>{{ member.empire_name }}</a></td>
+				<td>{{ member.real_name }}</td>
+				<td>{{ member.uni_level }}</td>
+				<td>{{ member.colony_count }}</td>
+				<td>{{ member.user_email }}</td>
+				<td>{{ member.last_update }}</td>
+				<td></td>
+			</tr>
+			{% endfor %}
+		</table>
+		<hr>
+		<form method="post" action="/admin">
+			<table>
+				<tr>
+					<td colspan=2><p align=right>Enter email address of Google ID used by ally:</p>
+							<input type="text" name="googID" /></td>
+					<td colspan=2><p align=right>Enter TLE empire name:</p>
+							<input type="text" name="TLEname" /></td>
+					<td><input type="submit" value="Check Info" /></td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+	  </head>
+	<body>
+		<h1 align=center>WARNING</h1>
+		<h2 align=center>Fermata Initialization -- Only run once!</h2>
+		<h2 align=center>In fact, you should probably disable this once you are done</h2>
+		<hr>
+		<form action="/init" method="post">
+			<table width=100%>
+				<tr>
+					<td><label for=username>Enter your TLE username:</label><input size=60 type=text name=username align=center /></td>
+					<td><label for=password>Enter your TLE sitter password:</label><input size=60 type=password name=password align=center /></td>
+				</tr>
+				<tr>
+					<td colspan=2><label for=api_key>Enter your TLE API Key</label><input size=120 type=text name=api_key align=center /></td>
+				</tr>
+				<tr>
+					<td colspan=2><input type="submit" value="Query TLE" /></td>
+				</tr>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+application: lacuna-fermata
+version: 2
+runtime: python
+api_version: 1
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+  login: required
+
+- url: /client
+  static_dir: client
+  login: required
+
+- url: /admin/.*
+  script: fermata.py
+  login: admin
+
+- url: /init/.*
+  script: fermata.py
+  login: admin
+
+- url: /.*
+  script: fermata.py
+  login: required

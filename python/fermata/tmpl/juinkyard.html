@@ -1,0 +1,40 @@
+<h2>Hi there, {{ user.nickname }}!</br>
+                It looks like you are going to be setting up your alliance in Fermata.<br>
+                To start, please enter your TLE username and password.</h2>
+                <h3>No need to worry! You can trust us -- we are a computer!</h3>
+                <p>Ha. Ha. Ha.</p>
+                <div    dojoType="dijit.form.Form" 
+                        id="myForm" 
+                        jsId="myForm" 
+                        encType="multipart/form-data"
+                        action="" 
+                        method="">
+                    <table class=dijitInlineTable width=100%>
+                        <tr>
+                            <td align=right>
+                                        TLE Login name:
+                                        <input dojoType="dijit.form.ValidationTextBox"
+                                                required="true"
+                                                trim="true"
+                                                invalidMessage="Required"
+                                                name="username"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align=right>
+                                        TLE Sitter Password:
+                                        <input type="password"
+                                                dojoType="dijit.form.ValidationTextBox"
+                                                required="true"
+                                                trim="true"
+                                                invalidMessage="Required"
+                                                name="tle_pass"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align=center colspan=2>
+                                <button dojoType="dijit.Form.Button" type="button" name="login_btn">Check TLE</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>

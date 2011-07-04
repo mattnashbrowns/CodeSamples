@@ -1,0 +1,32 @@
+<html>
+<head>
+	<link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+		<table>
+			<tr>
+				<th>Empire Name</th>
+				<th>Real Name</th>
+				<th>Uni Level</th>
+				<th>Colonies</th>
+				<th>Email</th>
+				<th>Updated</th>
+				<th>Actions</th>
+			</tr>
+			{% for member in allies %}
+			<tr>
+				<td><a href=/member?id={{ member.empire_id }}>{{ member.empire_name }}</a></td>
+				<td>{{ member.real_name }}</td>
+				<td>{{ member.uni_level }}</td>
+				<td>{{ member.colony_count }}</td>
+				<td>{{ member.user_email }}</td>
+				<td>{{ member.last_update }}</td>
+				<td></td>
+			</tr>
+			{% endfor %}
+			<tr>
+				<td colspan=7><a href=/admin?action=add>Add new ally</a></td>
+			</tr>
+		</table>
+	</body>
+</html>
